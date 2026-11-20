@@ -1,0 +1,23 @@
+{
+  "random_seed": 42,
+  "generator_configuration": {
+    "payment_count": 10,
+    "start_date": "2026-11-01",
+    "end_date": "2026-11-20",
+    "failed_payment_percentage": 0.0,
+    "refund_percentage": 0.0,
+    "min_amount": "100.00",
+    "max_amount": "10000.00",
+    "min_settlement_delay": 1,
+    "max_settlement_delay": 2,
+    "seed": 42,
+    "inject_discrepancies": false,
+    "cross_month_count": 0,
+    "rounding_count": 0,
+    "duplicate_count": 0,
+    "orphan_refund_count": 0
+  },
+  "total_platform_records": 10,
+  "total_bank_records": 10,
+  "injected_discrepancies": []
+}

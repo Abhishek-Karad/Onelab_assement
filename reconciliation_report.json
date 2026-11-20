@@ -1,0 +1,5538 @@
+{
+  "summary": {
+    "platform_transaction_count": 105,
+    "successful_payment_count": 93,
+    "failed_payment_count": 7,
+    "refund_count": 5,
+    "bank_settlement_count": 101,
+    "matched_event_count": 95,
+    "pending_settlement_count": 0,
+    "overdue_settlement_count": 0,
+    "unmatched_bank_record_count": 0,
+    "duplicate_record_count": 6,
+    "orphan_refund_count": 2,
+    "cross_month_settlement_count": 7,
+    "amount_mismatch_count": 9,
+    "total_discrepancies": 66
+  },
+  "financial_summary": {
+    "total_successful_platform_payment_amount": "457813.92",
+    "total_successful_platform_refund_amount": "20813.05",
+    "net_expected_amount": "437000.87",
+    "total_settled_bank_payment_amount": "468354.06",
+    "total_settled_bank_refund_amount": "20813.06",
+    "net_actual_amount": "447541.00",
+    "raw_net_difference": "10540.13",
+    "matched_record_amount_difference": "-0.01",
+    "pending_settlement_amount": "0.00",
+    "overdue_settlement_amount": "0.00",
+    "duplicate_related_amount": "42160.52",
+    "unmatched_bank_amount": "0.00",
+    "aggregate_rounding_difference": "-0.01",
+    "unresolved_financial_difference": "10540.14",
+    "bridge": {
+      "raw_difference": "10540.13",
+      "matched_record_difference": "-0.01",
+      "aggregate_rounding_candidate": "-0.01",
+      "unresolved_exposure": "10540.14"
+    }
+  },
+  "discrepancies": [
+    {
+      "transaction_id": "TXN000006",
+      "transaction_type": "PAYMENT",
+      "status": "MISMATCH",
+      "code": "AMOUNT_MISMATCH",
+      "explanation": "Platform and bank amounts differ.",
+      "amount_difference": "0.01",
+      "platform_record": {
+        "transaction_id": "TXN000006",
+        "transaction_date": "2026-10-01 07:34:17+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "4497.60",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000098",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000004",
+        "transaction_id": "TXN000006",
+        "settlement_date": "2026-10-03 07:34:17+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "4497.61",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000003"
+      }
+    },
+    {
+      "transaction_id": "TXN000007",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000007",
+        "transaction_date": "2026-10-17 12:25:14+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "8060.13",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000036",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000005",
+        "transaction_id": "TXN000007",
+        "settlement_date": "2026-10-20 12:25:14+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "8060.13",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000004"
+      }
+    },
+    {
+      "transaction_id": "TXN000008",
+      "transaction_type": "PAYMENT",
+      "status": "MISMATCH",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000008",
+        "transaction_date": "2026-10-17 08:09:39+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1563.24",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000014",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000006",
+        "transaction_id": "TXN000008",
+        "settlement_date": "2026-10-20 08:09:39+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1563.23",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000004"
+      }
+    },
+    {
+      "transaction_id": "TXN000008",
+      "transaction_type": "PAYMENT",
+      "status": "MISMATCH",
+      "code": "AMOUNT_MISMATCH",
+      "explanation": "Platform and bank amounts differ.",
+      "amount_difference": "-0.01",
+      "platform_record": {
+        "transaction_id": "TXN000008",
+        "transaction_date": "2026-10-17 08:09:39+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1563.24",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000014",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000006",
+        "transaction_id": "TXN000008",
+        "settlement_date": "2026-10-20 08:09:39+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1563.23",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000004"
+      }
+    },
+    {
+      "transaction_id": "TXN000011",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000011",
+        "transaction_date": "2026-10-04 19:48:31+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1257.01",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000071",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000008",
+        "transaction_id": "TXN000011",
+        "settlement_date": "2026-10-07 19:48:31+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1257.01",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000006"
+      }
+    },
+    {
+      "transaction_id": "TXN000012",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000012",
+        "transaction_date": "2026-10-18 13:20:07+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2938.85",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000074",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000009",
+        "transaction_id": "TXN000012",
+        "settlement_date": "2026-10-21 13:20:07+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2938.85",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000007"
+      }
+    },
+    {
+      "transaction_id": "TXN000015",
+      "transaction_type": "PAYMENT",
+      "status": "MISMATCH",
+      "code": "AMOUNT_MISMATCH",
+      "explanation": "Platform and bank amounts differ.",
+      "amount_difference": "-0.01",
+      "platform_record": {
+        "transaction_id": "TXN000015",
+        "transaction_date": "2026-10-18 17:03:37+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "3807.46",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000021",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000012",
+        "transaction_id": "TXN000015",
+        "settlement_date": "2026-10-19 17:03:37+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "3807.45",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000005"
+      }
+    },
+    {
+      "transaction_id": "TXN000018",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000018",
+        "transaction_date": "2026-10-08 22:22:39+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1719.68",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000060",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000015",
+        "transaction_id": "TXN000018",
+        "settlement_date": "2026-10-11 22:22:39+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1719.68",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000012"
+      }
+    },
+    {
+      "transaction_id": "TXN000022",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "DUPLICATE_BANK_TRANSACTION",
+      "explanation": "Multiple bank settlements reference this transaction; matching is ambiguous.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000022",
+        "transaction_date": "2026-10-28 12:48:45+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "671.22",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000092",
+        "original_transaction_id": ""
+      },
+      "bank_record": null
+    },
+    {
+      "transaction_id": "TXN000025",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000025",
+        "transaction_date": "2026-10-29 09:05:31+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5618.07",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000055",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000022",
+        "transaction_id": "TXN000025",
+        "settlement_date": "2026-11-01 09:05:31+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5618.07",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000016"
+      }
+    },
+    {
+      "transaction_id": "TXN000025",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "CROSS_MONTH_SETTLEMENT",
+      "explanation": "The settlement occurred in a different calendar month from the transaction.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000025",
+        "transaction_date": "2026-10-29 09:05:31+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5618.07",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000055",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000022",
+        "transaction_id": "TXN000025",
+        "settlement_date": "2026-11-01 09:05:31+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5618.07",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000016"
+      }
+    },
+    {
+      "transaction_id": "TXN000028",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000028",
+        "transaction_date": "2026-10-21 11:51:07+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1536.88",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000077",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000025",
+        "transaction_id": "TXN000028",
+        "settlement_date": "2026-10-24 11:51:07+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1536.88",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000018"
+      }
+    },
+    {
+      "transaction_id": "TXN000029",
+      "transaction_type": "PAYMENT",
+      "status": "MISMATCH",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000029",
+        "transaction_date": "2026-10-23 17:19:03+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "644.64",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000068",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000026",
+        "transaction_id": "TXN000029",
+        "settlement_date": "2026-10-26 17:19:03+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "644.65",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000019"
+      }
+    },
+    {
+      "transaction_id": "TXN000029",
+      "transaction_type": "PAYMENT",
+      "status": "MISMATCH",
+      "code": "AMOUNT_MISMATCH",
+      "explanation": "Platform and bank amounts differ.",
+      "amount_difference": "0.01",
+      "platform_record": {
+        "transaction_id": "TXN000029",
+        "transaction_date": "2026-10-23 17:19:03+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "644.64",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000068",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000026",
+        "transaction_id": "TXN000029",
+        "settlement_date": "2026-10-26 17:19:03+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "644.65",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000019"
+      }
+    },
+    {
+      "transaction_id": "TXN000032",
+      "transaction_type": "PAYMENT",
+      "status": "MISMATCH",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000032",
+        "transaction_date": "2026-10-06 09:58:03+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2675.58",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000038",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000029",
+        "transaction_id": "TXN000032",
+        "settlement_date": "2026-10-09 09:58:03+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2675.57",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000021"
+      }
+    },
+    {
+      "transaction_id": "TXN000032",
+      "transaction_type": "PAYMENT",
+      "status": "MISMATCH",
+      "code": "AMOUNT_MISMATCH",
+      "explanation": "Platform and bank amounts differ.",
+      "amount_difference": "-0.01",
+      "platform_record": {
+        "transaction_id": "TXN000032",
+        "transaction_date": "2026-10-06 09:58:03+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2675.58",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000038",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000029",
+        "transaction_id": "TXN000032",
+        "settlement_date": "2026-10-09 09:58:03+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2675.57",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000021"
+      }
+    },
+    {
+      "transaction_id": "TXN000034",
+      "transaction_type": "PAYMENT",
+      "status": "MISMATCH",
+      "code": "AMOUNT_MISMATCH",
+      "explanation": "Platform and bank amounts differ.",
+      "amount_difference": "-0.01",
+      "platform_record": {
+        "transaction_id": "TXN000034",
+        "transaction_date": "2026-10-06 03:58:39+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "7622.00",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000081",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000031",
+        "transaction_id": "TXN000034",
+        "settlement_date": "2026-10-08 03:58:39+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "7621.99",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000022"
+      }
+    },
+    {
+      "transaction_id": "TXN000036",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000036",
+        "transaction_date": "2026-10-27 04:25:19+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1536.86",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000100",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000033",
+        "transaction_id": "TXN000036",
+        "settlement_date": "2026-10-30 04:25:19+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1536.86",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000013"
+      }
+    },
+    {
+      "transaction_id": "TXN000037",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "code": "CROSS_MONTH_SETTLEMENT",
+      "explanation": "The settlement occurred in a different calendar month from the transaction.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000037",
+        "transaction_date": "2026-10-30 01:49:15+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9225.12",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000042",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000034",
+        "transaction_id": "TXN000037",
+        "settlement_date": "2026-11-01 01:49:15+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9225.12",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000016"
+      }
+    },
+    {
+      "transaction_id": "TXN000039",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000039",
+        "transaction_date": "2026-10-28 13:01:07+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2402.13",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000011",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000036",
+        "transaction_id": "TXN000039",
+        "settlement_date": "2026-10-31 13:01:07+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2402.13",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000011"
+      }
+    },
+    {
+      "transaction_id": "TXN000040",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000040",
+        "transaction_date": "2026-10-04 08:38:18+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "865.68",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000098",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000037",
+        "transaction_id": "TXN000040",
+        "settlement_date": "2026-10-07 08:38:18+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "865.68",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000006"
+      }
+    },
+    {
+      "transaction_id": "TXN000041",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000041",
+        "transaction_date": "2026-10-24 01:44:38+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5331.73",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000071",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000038",
+        "transaction_id": "TXN000041",
+        "settlement_date": "2026-11-27 01:44:38+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5331.73",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000023"
+      }
+    },
+    {
+      "transaction_id": "TXN000041",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "CROSS_MONTH_SETTLEMENT",
+      "explanation": "The settlement occurred in a different calendar month from the transaction.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000041",
+        "transaction_date": "2026-10-24 01:44:38+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5331.73",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000071",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000038",
+        "transaction_id": "TXN000041",
+        "settlement_date": "2026-11-27 01:44:38+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5331.73",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000023"
+      }
+    },
+    {
+      "transaction_id": "TXN000042",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000042",
+        "transaction_date": "2026-10-30 10:43:59+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1659.62",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000055",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000039",
+        "transaction_id": "TXN000042",
+        "settlement_date": "2026-11-02 10:43:59+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1659.62",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000024"
+      }
+    },
+    {
+      "transaction_id": "TXN000042",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "CROSS_MONTH_SETTLEMENT",
+      "explanation": "The settlement occurred in a different calendar month from the transaction.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000042",
+        "transaction_date": "2026-10-30 10:43:59+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1659.62",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000055",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000039",
+        "transaction_id": "TXN000042",
+        "settlement_date": "2026-11-02 10:43:59+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1659.62",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000024"
+      }
+    },
+    {
+      "transaction_id": "TXN000043",
+      "transaction_type": "PAYMENT",
+      "status": "MISMATCH",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000043",
+        "transaction_date": "2026-10-10 18:21:28+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9643.99",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000092",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000040",
+        "transaction_id": "TXN000043",
+        "settlement_date": "2026-10-13 18:21:28+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9644.00",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000009"
+      }
+    },
+    {
+      "transaction_id": "TXN000043",
+      "transaction_type": "PAYMENT",
+      "status": "MISMATCH",
+      "code": "AMOUNT_MISMATCH",
+      "explanation": "Platform and bank amounts differ.",
+      "amount_difference": "0.01",
+      "platform_record": {
+        "transaction_id": "TXN000043",
+        "transaction_date": "2026-10-10 18:21:28+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9643.99",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000092",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000040",
+        "transaction_id": "TXN000043",
+        "settlement_date": "2026-10-13 18:21:28+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9644.00",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000009"
+      }
+    },
+    {
+      "transaction_id": "TXN000044",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000044",
+        "transaction_date": "2026-10-19 03:03:59+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "3124.05",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000057",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000041",
+        "transaction_id": "TXN000044",
+        "settlement_date": "2026-10-22 03:03:59+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "3124.05",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000015"
+      }
+    },
+    {
+      "transaction_id": "TXN000045",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000045",
+        "transaction_date": "2026-10-13 00:49:51+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "8997.14",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000029",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000042",
+        "transaction_id": "TXN000045",
+        "settlement_date": "2026-10-16 00:49:51+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "8997.14",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000025"
+      }
+    },
+    {
+      "transaction_id": "TXN000052",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000052",
+        "transaction_date": "2026-10-18 04:47:11+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "952.31",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000055",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000047",
+        "transaction_id": "TXN000052",
+        "settlement_date": "2026-10-21 04:47:11+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "952.31",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000007"
+      }
+    },
+    {
+      "transaction_id": "TXN000054",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000054",
+        "transaction_date": "2026-10-03 22:37:07+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "6538.02",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000052",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000049",
+        "transaction_id": "TXN000054",
+        "settlement_date": "2026-10-06 22:37:07+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "6538.02",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000027"
+      }
+    },
+    {
+      "transaction_id": "TXN000056",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000056",
+        "transaction_date": "2026-10-07 19:19:27+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1923.98",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000055",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000051",
+        "transaction_id": "TXN000056",
+        "settlement_date": "2026-10-10 19:19:27+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1923.98",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000028"
+      }
+    },
+    {
+      "transaction_id": "TXN000058",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000058",
+        "transaction_date": "2026-10-05 18:04:18+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "8082.14",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000007",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000053",
+        "transaction_id": "TXN000058",
+        "settlement_date": "2026-10-08 18:04:18+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "8082.14",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000022"
+      }
+    },
+    {
+      "transaction_id": "TXN000060",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000060",
+        "transaction_date": "2026-10-09 01:45:59+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9264.41",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000053",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000055",
+        "transaction_id": "TXN000060",
+        "settlement_date": "2026-10-12 01:45:59+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9264.41",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000029"
+      }
+    },
+    {
+      "transaction_id": "TXN000063",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000063",
+        "transaction_date": "2026-10-14 20:20:21+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9265.92",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000055",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000057",
+        "transaction_id": "TXN000063",
+        "settlement_date": "2026-10-17 20:20:21+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9265.92",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000030"
+      }
+    },
+    {
+      "transaction_id": "TXN000067",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000067",
+        "transaction_date": "2026-10-29 08:36:58+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "7482.28",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000062",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000061",
+        "transaction_id": "TXN000067",
+        "settlement_date": "2026-11-01 08:36:58+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "7482.28",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000016"
+      }
+    },
+    {
+      "transaction_id": "TXN000067",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "CROSS_MONTH_SETTLEMENT",
+      "explanation": "The settlement occurred in a different calendar month from the transaction.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000067",
+        "transaction_date": "2026-10-29 08:36:58+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "7482.28",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000062",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000061",
+        "transaction_id": "TXN000067",
+        "settlement_date": "2026-11-01 08:36:58+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "7482.28",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000016"
+      }
+    },
+    {
+      "transaction_id": "TXN000069",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000069",
+        "transaction_date": "2026-10-10 00:30:06+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9608.18",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000009",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000063",
+        "transaction_id": "TXN000069",
+        "settlement_date": "2026-10-13 00:30:06+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9608.18",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000009"
+      }
+    },
+    {
+      "transaction_id": "TXN000073",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000073",
+        "transaction_date": "2026-10-13 15:48:50+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5840.89",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000027",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000067",
+        "transaction_id": "TXN000073",
+        "settlement_date": "2026-10-16 15:48:50+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5840.89",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000025"
+      }
+    },
+    {
+      "transaction_id": "TXN000075",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000075",
+        "transaction_date": "2026-10-23 04:42:18+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1317.47",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000041",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000069",
+        "transaction_id": "TXN000075",
+        "settlement_date": "2026-10-26 04:42:18+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1317.47",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000019"
+      }
+    },
+    {
+      "transaction_id": "TXN000076",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000076",
+        "transaction_date": "2026-10-01 10:51:11+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9290.89",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000059",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000070",
+        "transaction_id": "TXN000076",
+        "settlement_date": "2026-10-04 10:51:11+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9290.89",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000014"
+      }
+    },
+    {
+      "transaction_id": "TXN000078",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000078",
+        "transaction_date": "2026-10-07 10:19:23+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5380.97",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000045",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000072",
+        "transaction_id": "TXN000078",
+        "settlement_date": "2026-10-10 10:19:23+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5380.97",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000028"
+      }
+    },
+    {
+      "transaction_id": "TXN000079",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000079",
+        "transaction_date": "2026-10-18 22:31:48+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "8809.83",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000037",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000073",
+        "transaction_id": "TXN000079",
+        "settlement_date": "2026-10-21 22:31:48+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "8809.83",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000007"
+      }
+    },
+    {
+      "transaction_id": "TXN000082",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000082",
+        "transaction_date": "2026-10-06 00:41:13+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "6681.95",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000018",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000076",
+        "transaction_id": "TXN000082",
+        "settlement_date": "2026-10-09 00:41:13+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "6681.95",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000021"
+      }
+    },
+    {
+      "transaction_id": "TXN000088",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000088",
+        "transaction_date": "2026-10-13 17:12:00+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "3342.23",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000021",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000082",
+        "transaction_id": "TXN000088",
+        "settlement_date": "2026-10-16 17:12:00+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "3342.23",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000025"
+      }
+    },
+    {
+      "transaction_id": "TXN000089",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000089",
+        "transaction_date": "2026-10-21 18:17:28+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "7414.90",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000072",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000083",
+        "transaction_id": "TXN000089",
+        "settlement_date": "2026-10-24 18:17:28+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "7414.90",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000018"
+      }
+    },
+    {
+      "transaction_id": "TXN000090",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "DUPLICATE_BANK_TRANSACTION",
+      "explanation": "Multiple bank settlements reference this transaction; matching is ambiguous.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000090",
+        "transaction_date": "2026-10-08 05:39:38+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "106.60",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000070",
+        "original_transaction_id": ""
+      },
+      "bank_record": null
+    },
+    {
+      "transaction_id": "TXN000091",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000091",
+        "transaction_date": "2026-10-27 19:44:18+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "369.92",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000019",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000085",
+        "transaction_id": "TXN000091",
+        "settlement_date": "2026-11-29 19:44:18+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "369.92",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000001"
+      }
+    },
+    {
+      "transaction_id": "TXN000091",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "CROSS_MONTH_SETTLEMENT",
+      "explanation": "The settlement occurred in a different calendar month from the transaction.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000091",
+        "transaction_date": "2026-10-27 19:44:18+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "369.92",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000019",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000085",
+        "transaction_id": "TXN000091",
+        "settlement_date": "2026-11-29 19:44:18+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "369.92",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000001"
+      }
+    },
+    {
+      "transaction_id": "TXN000094",
+      "transaction_type": "PAYMENT",
+      "status": "MISMATCH",
+      "code": "AMOUNT_MISMATCH",
+      "explanation": "Platform and bank amounts differ.",
+      "amount_difference": "0.01",
+      "platform_record": {
+        "transaction_id": "TXN000094",
+        "transaction_date": "2026-10-20 17:27:50+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1036.91",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000080",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000087",
+        "transaction_id": "TXN000094",
+        "settlement_date": "2026-10-22 17:27:50+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1036.92",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000015"
+      }
+    },
+    {
+      "transaction_id": "TXN000096",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "DUPLICATE_BANK_TRANSACTION",
+      "explanation": "Multiple bank settlements reference this transaction; matching is ambiguous.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000096",
+        "transaction_date": "2026-10-21 00:21:28+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9762.30",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000004",
+        "original_transaction_id": ""
+      },
+      "bank_record": null
+    },
+    {
+      "transaction_id": "TXN000098",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000098",
+        "transaction_date": "2026-10-13 22:51:04+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "8642.00",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000021",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000091",
+        "transaction_id": "TXN000098",
+        "settlement_date": "2026-10-16 22:51:04+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "8642.00",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000025"
+      }
+    },
+    {
+      "transaction_id": "TXN000100",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000100",
+        "transaction_date": "2026-10-23 08:17:31+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2232.11",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000045",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000093",
+        "transaction_id": "TXN000100",
+        "settlement_date": "2026-11-26 08:17:31+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2232.11",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000019"
+      }
+    },
+    {
+      "transaction_id": "TXN000100",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "code": "CROSS_MONTH_SETTLEMENT",
+      "explanation": "The settlement occurred in a different calendar month from the transaction.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "TXN000100",
+        "transaction_date": "2026-10-23 08:17:31+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2232.11",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000045",
+        "original_transaction_id": ""
+      },
+      "bank_record": {
+        "settlement_id": "SET000093",
+        "transaction_id": "TXN000100",
+        "settlement_date": "2026-11-26 08:17:31+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2232.11",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000019"
+      }
+    },
+    {
+      "transaction_id": "REF000002",
+      "transaction_type": "REFUND",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "REF000002",
+        "transaction_date": "2026-10-14 17:28:13+00:00",
+        "transaction_type": "REFUND",
+        "amount": "4353.30",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000065",
+        "original_transaction_id": "TXN000033"
+      },
+      "bank_record": {
+        "settlement_id": "SET000095",
+        "transaction_id": "REF000002",
+        "settlement_date": "2026-10-17 17:28:13+00:00",
+        "transaction_type": "REFUND",
+        "amount": "4353.30",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000030"
+      }
+    },
+    {
+      "transaction_id": "REF000004",
+      "transaction_type": "REFUND",
+      "status": "REVIEW_REQUIRED",
+      "code": "ORPHAN_REFUND",
+      "explanation": "The refund references an original payment that does not exist uniquely.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "REF000004",
+        "transaction_date": "2026-10-04 15:52:47+00:00",
+        "transaction_type": "REFUND",
+        "amount": "1843.05",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000057",
+        "original_transaction_id": "TXN999001"
+      },
+      "bank_record": {
+        "settlement_id": "SET000097",
+        "transaction_id": "REF000004",
+        "settlement_date": "2026-10-06 15:52:47+00:00",
+        "transaction_type": "REFUND",
+        "amount": "1843.06",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000027"
+      }
+    },
+    {
+      "transaction_id": "REF000004",
+      "transaction_type": "REFUND",
+      "status": "REVIEW_REQUIRED",
+      "code": "AMOUNT_MISMATCH",
+      "explanation": "Platform and bank amounts differ.",
+      "amount_difference": "0.01",
+      "platform_record": {
+        "transaction_id": "REF000004",
+        "transaction_date": "2026-10-04 15:52:47+00:00",
+        "transaction_type": "REFUND",
+        "amount": "1843.05",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000057",
+        "original_transaction_id": "TXN999001"
+      },
+      "bank_record": {
+        "settlement_id": "SET000097",
+        "transaction_id": "REF000004",
+        "settlement_date": "2026-10-06 15:52:47+00:00",
+        "transaction_type": "REFUND",
+        "amount": "1843.06",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000027"
+      }
+    },
+    {
+      "transaction_id": "REF000005",
+      "transaction_type": "REFUND",
+      "status": "REVIEW_REQUIRED",
+      "code": "ORPHAN_REFUND",
+      "explanation": "The refund references an original payment that does not exist uniquely.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "REF000005",
+        "transaction_date": "2026-10-17 01:02:37+00:00",
+        "transaction_type": "REFUND",
+        "amount": "2297.13",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000010",
+        "original_transaction_id": "TXN999002"
+      },
+      "bank_record": {
+        "settlement_id": "SET000098",
+        "transaction_id": "REF000005",
+        "settlement_date": "2026-10-20 01:02:37+00:00",
+        "transaction_type": "REFUND",
+        "amount": "2297.13",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000004"
+      }
+    },
+    {
+      "transaction_id": "REF000005",
+      "transaction_type": "REFUND",
+      "status": "REVIEW_REQUIRED",
+      "code": "LATE_SETTLEMENT",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "amount_difference": "0.00",
+      "platform_record": {
+        "transaction_id": "REF000005",
+        "transaction_date": "2026-10-17 01:02:37+00:00",
+        "transaction_type": "REFUND",
+        "amount": "2297.13",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000010",
+        "original_transaction_id": "TXN999002"
+      },
+      "bank_record": {
+        "settlement_id": "SET000098",
+        "transaction_id": "REF000005",
+        "settlement_date": "2026-10-20 01:02:37+00:00",
+        "transaction_type": "REFUND",
+        "amount": "2297.13",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000004"
+      }
+    },
+    {
+      "transaction_id": null,
+      "transaction_type": "AGGREGATE",
+      "status": "REVIEW_REQUIRED",
+      "code": "AGGREGATE_ROUNDING_DIFFERENCE",
+      "explanation": "Small matched-record amount differences accumulate across transactions; this is a rounding candidate, not proof of a rounding method.",
+      "amount_difference": "-0.01",
+      "platform_record": null,
+      "bank_record": null
+    },
+    {
+      "transaction_id": "SET000019",
+      "transaction_type": "DUPLICATE",
+      "status": "REVIEW_REQUIRED",
+      "code": "DUPLICATE_BANK_RECORD",
+      "explanation": "2 records share identifier SET000019.",
+      "amount_difference": "1342.46",
+      "platform_record": null,
+      "bank_record": null,
+      "dataset": "bank",
+      "identifier": "SET000019",
+      "occurrences": 2,
+      "rows": [
+        20,
+        100
+      ],
+      "amount": "1342.46"
+    },
+    {
+      "transaction_id": "SET000084",
+      "transaction_type": "DUPLICATE",
+      "status": "REVIEW_REQUIRED",
+      "code": "DUPLICATE_BANK_RECORD",
+      "explanation": "2 records share identifier SET000084.",
+      "amount_difference": "213.20",
+      "platform_record": null,
+      "bank_record": null,
+      "dataset": "bank",
+      "identifier": "SET000084",
+      "occurrences": 2,
+      "rows": [
+        85,
+        101
+      ],
+      "amount": "213.20"
+    },
+    {
+      "transaction_id": "SET000089",
+      "transaction_type": "DUPLICATE",
+      "status": "REVIEW_REQUIRED",
+      "code": "DUPLICATE_BANK_RECORD",
+      "explanation": "2 records share identifier SET000089.",
+      "amount_difference": "19524.60",
+      "platform_record": null,
+      "bank_record": null,
+      "dataset": "bank",
+      "identifier": "SET000089",
+      "occurrences": 2,
+      "rows": [
+        90,
+        102
+      ],
+      "amount": "19524.60"
+    },
+    {
+      "transaction_id": "TXN000022",
+      "transaction_type": "DUPLICATE",
+      "status": "REVIEW_REQUIRED",
+      "code": "DUPLICATE_BANK_TRANSACTION",
+      "explanation": "2 records share identifier TXN000022.",
+      "amount_difference": "1342.46",
+      "platform_record": null,
+      "bank_record": null,
+      "dataset": "bank",
+      "identifier": "TXN000022",
+      "occurrences": 2,
+      "rows": [
+        20,
+        100
+      ],
+      "amount": "1342.46"
+    },
+    {
+      "transaction_id": "TXN000090",
+      "transaction_type": "DUPLICATE",
+      "status": "REVIEW_REQUIRED",
+      "code": "DUPLICATE_BANK_TRANSACTION",
+      "explanation": "2 records share identifier TXN000090.",
+      "amount_difference": "213.20",
+      "platform_record": null,
+      "bank_record": null,
+      "dataset": "bank",
+      "identifier": "TXN000090",
+      "occurrences": 2,
+      "rows": [
+        85,
+        101
+      ],
+      "amount": "213.20"
+    },
+    {
+      "transaction_id": "TXN000096",
+      "transaction_type": "DUPLICATE",
+      "status": "REVIEW_REQUIRED",
+      "code": "DUPLICATE_BANK_TRANSACTION",
+      "explanation": "2 records share identifier TXN000096.",
+      "amount_difference": "19524.60",
+      "platform_record": null,
+      "bank_record": null,
+      "dataset": "bank",
+      "identifier": "TXN000096",
+      "occurrences": 2,
+      "rows": [
+        90,
+        102
+      ],
+      "amount": "19524.60"
+    }
+  ],
+  "matched_transactions": [
+    {
+      "transaction_id": "TXN000001",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "6397.87",
+      "bank_amount": "0.00",
+      "difference": "0.00",
+      "transaction_date": "2026-10-14 08:25:56+00:00",
+      "settlement_date": null,
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000001",
+        "transaction_date": "2026-10-14 08:25:56+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "6397.87",
+        "currency": "INR",
+        "payment_status": "FAILED",
+        "customer_id": "CUS000032",
+        "original_transaction_id": ""
+      },
+      "bank_records": []
+    },
+    {
+      "transaction_id": "TXN000002",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "2239.88",
+      "bank_amount": "2239.88",
+      "difference": "0.00",
+      "transaction_date": "2026-10-27 11:23:53+00:00",
+      "settlement_date": "2026-10-29 11:23:53+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000002",
+        "transaction_date": "2026-10-27 11:23:53+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2239.88",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000012",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000001",
+          "transaction_id": "TXN000002",
+          "settlement_date": "2026-10-29 11:23:53+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "2239.88",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000001"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000003",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "5909.02",
+      "bank_amount": "0.00",
+      "difference": "0.00",
+      "transaction_date": "2026-10-05 13:09:46+00:00",
+      "settlement_date": null,
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000003",
+        "transaction_date": "2026-10-05 13:09:46+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5909.02",
+        "currency": "INR",
+        "payment_status": "FAILED",
+        "customer_id": "CUS000028",
+        "original_transaction_id": ""
+      },
+      "bank_records": []
+    },
+    {
+      "transaction_id": "TXN000004",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "2334.28",
+      "bank_amount": "2334.28",
+      "difference": "0.00",
+      "transaction_date": "2026-10-28 05:53:52+00:00",
+      "settlement_date": "2026-10-29 05:53:52+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000004",
+        "transaction_date": "2026-10-28 05:53:52+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2334.28",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000026",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000002",
+          "transaction_id": "TXN000004",
+          "settlement_date": "2026-10-29 05:53:52+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "2334.28",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000001"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000005",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "7163.04",
+      "bank_amount": "7163.04",
+      "difference": "0.00",
+      "transaction_date": "2026-10-21 08:46:33+00:00",
+      "settlement_date": "2026-10-23 08:46:33+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000005",
+        "transaction_date": "2026-10-21 08:46:33+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "7163.04",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000029",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000003",
+          "transaction_id": "TXN000005",
+          "settlement_date": "2026-10-23 08:46:33+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "7163.04",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000002"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000006",
+      "transaction_type": "PAYMENT",
+      "status": "MISMATCH",
+      "findings": [
+        "AMOUNT_MISMATCH"
+      ],
+      "platform_amount": "4497.60",
+      "bank_amount": "4497.61",
+      "difference": "0.01",
+      "transaction_date": "2026-10-01 07:34:17+00:00",
+      "settlement_date": "2026-10-03 07:34:17+00:00",
+      "explanation": "Platform and bank amounts differ.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000006",
+        "transaction_date": "2026-10-01 07:34:17+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "4497.60",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000098",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000004",
+          "transaction_id": "TXN000006",
+          "settlement_date": "2026-10-03 07:34:17+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "4497.61",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000003"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000007",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "8060.13",
+      "bank_amount": "8060.13",
+      "difference": "0.00",
+      "transaction_date": "2026-10-17 12:25:14+00:00",
+      "settlement_date": "2026-10-20 12:25:14+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000007",
+        "transaction_date": "2026-10-17 12:25:14+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "8060.13",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000036",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000005",
+          "transaction_id": "TXN000007",
+          "settlement_date": "2026-10-20 12:25:14+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "8060.13",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000004"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000008",
+      "transaction_type": "PAYMENT",
+      "status": "MISMATCH",
+      "findings": [
+        "LATE_SETTLEMENT",
+        "AMOUNT_MISMATCH"
+      ],
+      "platform_amount": "1563.24",
+      "bank_amount": "1563.23",
+      "difference": "-0.01",
+      "transaction_date": "2026-10-17 08:09:39+00:00",
+      "settlement_date": "2026-10-20 08:09:39+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.; Platform and bank amounts differ.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000008",
+        "transaction_date": "2026-10-17 08:09:39+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1563.24",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000014",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000006",
+          "transaction_id": "TXN000008",
+          "settlement_date": "2026-10-20 08:09:39+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "1563.23",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000004"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000009",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "936.53",
+      "bank_amount": "936.53",
+      "difference": "0.00",
+      "transaction_date": "2026-10-17 16:44:14+00:00",
+      "settlement_date": "2026-10-19 16:44:14+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000009",
+        "transaction_date": "2026-10-17 16:44:14+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "936.53",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000078",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000007",
+          "transaction_id": "TXN000009",
+          "settlement_date": "2026-10-19 16:44:14+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "936.53",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000005"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000010",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "2652.56",
+      "bank_amount": "0.00",
+      "difference": "0.00",
+      "transaction_date": "2026-10-23 07:16:07+00:00",
+      "settlement_date": null,
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000010",
+        "transaction_date": "2026-10-23 07:16:07+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2652.56",
+        "currency": "INR",
+        "payment_status": "FAILED",
+        "customer_id": "CUS000069",
+        "original_transaction_id": ""
+      },
+      "bank_records": []
+    },
+    {
+      "transaction_id": "TXN000011",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "1257.01",
+      "bank_amount": "1257.01",
+      "difference": "0.00",
+      "transaction_date": "2026-10-04 19:48:31+00:00",
+      "settlement_date": "2026-10-07 19:48:31+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000011",
+        "transaction_date": "2026-10-04 19:48:31+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1257.01",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000071",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000008",
+          "transaction_id": "TXN000011",
+          "settlement_date": "2026-10-07 19:48:31+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "1257.01",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000006"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000012",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "2938.85",
+      "bank_amount": "2938.85",
+      "difference": "0.00",
+      "transaction_date": "2026-10-18 13:20:07+00:00",
+      "settlement_date": "2026-10-21 13:20:07+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000012",
+        "transaction_date": "2026-10-18 13:20:07+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2938.85",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000074",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000009",
+          "transaction_id": "TXN000012",
+          "settlement_date": "2026-10-21 13:20:07+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "2938.85",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000007"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000013",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "1930.96",
+      "bank_amount": "1930.96",
+      "difference": "0.00",
+      "transaction_date": "2026-10-12 01:31:14+00:00",
+      "settlement_date": "2026-10-14 01:31:14+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000013",
+        "transaction_date": "2026-10-12 01:31:14+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1930.96",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000099",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000010",
+          "transaction_id": "TXN000013",
+          "settlement_date": "2026-10-14 01:31:14+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "1930.96",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000008"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000014",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "2900.99",
+      "bank_amount": "2900.99",
+      "difference": "0.00",
+      "transaction_date": "2026-10-12 07:13:15+00:00",
+      "settlement_date": "2026-10-13 07:13:15+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000014",
+        "transaction_date": "2026-10-12 07:13:15+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2900.99",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000013",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000011",
+          "transaction_id": "TXN000014",
+          "settlement_date": "2026-10-13 07:13:15+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "2900.99",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000009"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000015",
+      "transaction_type": "PAYMENT",
+      "status": "MISMATCH",
+      "findings": [
+        "AMOUNT_MISMATCH"
+      ],
+      "platform_amount": "3807.46",
+      "bank_amount": "3807.45",
+      "difference": "-0.01",
+      "transaction_date": "2026-10-18 17:03:37+00:00",
+      "settlement_date": "2026-10-19 17:03:37+00:00",
+      "explanation": "Platform and bank amounts differ.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000015",
+        "transaction_date": "2026-10-18 17:03:37+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "3807.46",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000021",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000012",
+          "transaction_id": "TXN000015",
+          "settlement_date": "2026-10-19 17:03:37+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "3807.45",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000005"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000016",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "3708.11",
+      "bank_amount": "3708.11",
+      "difference": "0.00",
+      "transaction_date": "2026-10-13 23:03:06+00:00",
+      "settlement_date": "2026-10-15 23:03:06+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000016",
+        "transaction_date": "2026-10-13 23:03:06+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "3708.11",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000090",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000013",
+          "transaction_id": "TXN000016",
+          "settlement_date": "2026-10-15 23:03:06+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "3708.11",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000010"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000017",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "9367.18",
+      "bank_amount": "9367.18",
+      "difference": "0.00",
+      "transaction_date": "2026-10-30 13:41:20+00:00",
+      "settlement_date": "2026-10-31 13:41:20+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000017",
+        "transaction_date": "2026-10-30 13:41:20+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9367.18",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000082",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000014",
+          "transaction_id": "TXN000017",
+          "settlement_date": "2026-10-31 13:41:20+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "9367.18",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000011"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000018",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "1719.68",
+      "bank_amount": "1719.68",
+      "difference": "0.00",
+      "transaction_date": "2026-10-08 22:22:39+00:00",
+      "settlement_date": "2026-10-11 22:22:39+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000018",
+        "transaction_date": "2026-10-08 22:22:39+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1719.68",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000060",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000015",
+          "transaction_id": "TXN000018",
+          "settlement_date": "2026-10-11 22:22:39+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "1719.68",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000012"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000019",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "3800.76",
+      "bank_amount": "3800.76",
+      "difference": "0.00",
+      "transaction_date": "2026-10-28 00:53:36+00:00",
+      "settlement_date": "2026-10-30 00:53:36+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000019",
+        "transaction_date": "2026-10-28 00:53:36+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "3800.76",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000029",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000016",
+          "transaction_id": "TXN000019",
+          "settlement_date": "2026-10-30 00:53:36+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "3800.76",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000013"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000020",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "6849.30",
+      "bank_amount": "6849.30",
+      "difference": "0.00",
+      "transaction_date": "2026-10-03 17:10:20+00:00",
+      "settlement_date": "2026-10-04 17:10:20+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000020",
+        "transaction_date": "2026-10-03 17:10:20+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "6849.30",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000030",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000017",
+          "transaction_id": "TXN000020",
+          "settlement_date": "2026-10-04 17:10:20+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "6849.30",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000014"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000021",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "8219.81",
+      "bank_amount": "8219.81",
+      "difference": "0.00",
+      "transaction_date": "2026-10-20 11:23:27+00:00",
+      "settlement_date": "2026-10-21 11:23:27+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000021",
+        "transaction_date": "2026-10-20 11:23:27+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "8219.81",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000035",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000018",
+          "transaction_id": "TXN000021",
+          "settlement_date": "2026-10-21 11:23:27+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "8219.81",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000007"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000022",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "DUPLICATE_BANK_TRANSACTION"
+      ],
+      "platform_amount": "671.22",
+      "bank_amount": "0.00",
+      "difference": "0.00",
+      "transaction_date": "2026-10-28 12:48:45+00:00",
+      "settlement_date": null,
+      "explanation": "Multiple bank settlements reference this transaction; matching is ambiguous.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000022",
+        "transaction_date": "2026-10-28 12:48:45+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "671.22",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000092",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000019",
+          "transaction_id": "TXN000022",
+          "settlement_date": "2026-10-31 12:48:45+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "671.23",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000011"
+        },
+        {
+          "settlement_id": "SET000019",
+          "transaction_id": "TXN000022",
+          "settlement_date": "2026-10-31 12:48:45+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "671.23",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000011"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000023",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "3153.63",
+      "bank_amount": "3153.63",
+      "difference": "0.00",
+      "transaction_date": "2026-10-20 04:56:40+00:00",
+      "settlement_date": "2026-10-22 04:56:40+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000023",
+        "transaction_date": "2026-10-20 04:56:40+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "3153.63",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000083",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000020",
+          "transaction_id": "TXN000023",
+          "settlement_date": "2026-10-22 04:56:40+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "3153.63",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000015"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000024",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "4593.93",
+      "bank_amount": "4593.93",
+      "difference": "0.00",
+      "transaction_date": "2026-10-12 23:20:30+00:00",
+      "settlement_date": "2026-10-14 23:20:30+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000024",
+        "transaction_date": "2026-10-12 23:20:30+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "4593.93",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000096",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000021",
+          "transaction_id": "TXN000024",
+          "settlement_date": "2026-10-14 23:20:30+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "4593.93",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000008"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000025",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT",
+        "CROSS_MONTH_SETTLEMENT"
+      ],
+      "platform_amount": "5618.07",
+      "bank_amount": "5618.07",
+      "difference": "0.00",
+      "transaction_date": "2026-10-29 09:05:31+00:00",
+      "settlement_date": "2026-11-01 09:05:31+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.; The settlement occurred in a different calendar month from the transaction.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000025",
+        "transaction_date": "2026-10-29 09:05:31+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5618.07",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000055",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000022",
+          "transaction_id": "TXN000025",
+          "settlement_date": "2026-11-01 09:05:31+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "5618.07",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000016"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000026",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "8979.25",
+      "bank_amount": "8979.25",
+      "difference": "0.00",
+      "transaction_date": "2026-10-11 15:31:37+00:00",
+      "settlement_date": "2026-10-13 15:31:37+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000026",
+        "transaction_date": "2026-10-11 15:31:37+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "8979.25",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000018",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000023",
+          "transaction_id": "TXN000026",
+          "settlement_date": "2026-10-13 15:31:37+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "8979.25",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000009"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000027",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "5100.17",
+      "bank_amount": "5100.17",
+      "difference": "0.00",
+      "transaction_date": "2026-10-03 06:53:40+00:00",
+      "settlement_date": "2026-10-05 06:53:40+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000027",
+        "transaction_date": "2026-10-03 06:53:40+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5100.17",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000015",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000024",
+          "transaction_id": "TXN000027",
+          "settlement_date": "2026-10-05 06:53:40+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "5100.17",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000017"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000028",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "1536.88",
+      "bank_amount": "1536.88",
+      "difference": "0.00",
+      "transaction_date": "2026-10-21 11:51:07+00:00",
+      "settlement_date": "2026-10-24 11:51:07+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000028",
+        "transaction_date": "2026-10-21 11:51:07+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1536.88",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000077",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000025",
+          "transaction_id": "TXN000028",
+          "settlement_date": "2026-10-24 11:51:07+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "1536.88",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000018"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000029",
+      "transaction_type": "PAYMENT",
+      "status": "MISMATCH",
+      "findings": [
+        "LATE_SETTLEMENT",
+        "AMOUNT_MISMATCH"
+      ],
+      "platform_amount": "644.64",
+      "bank_amount": "644.65",
+      "difference": "0.01",
+      "transaction_date": "2026-10-23 17:19:03+00:00",
+      "settlement_date": "2026-10-26 17:19:03+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.; Platform and bank amounts differ.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000029",
+        "transaction_date": "2026-10-23 17:19:03+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "644.64",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000068",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000026",
+          "transaction_id": "TXN000029",
+          "settlement_date": "2026-10-26 17:19:03+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "644.65",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000019"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000030",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "2521.63",
+      "bank_amount": "2521.63",
+      "difference": "0.00",
+      "transaction_date": "2026-10-01 13:22:34+00:00",
+      "settlement_date": "2026-10-02 13:22:34+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000030",
+        "transaction_date": "2026-10-01 13:22:34+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2521.63",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000088",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000027",
+          "transaction_id": "TXN000030",
+          "settlement_date": "2026-10-02 13:22:34+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "2521.63",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000020"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000031",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "7210.01",
+      "bank_amount": "7210.01",
+      "difference": "0.00",
+      "transaction_date": "2026-10-27 01:36:56+00:00",
+      "settlement_date": "2026-10-29 01:36:56+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000031",
+        "transaction_date": "2026-10-27 01:36:56+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "7210.01",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000097",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000028",
+          "transaction_id": "TXN000031",
+          "settlement_date": "2026-10-29 01:36:56+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "7210.01",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000001"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000032",
+      "transaction_type": "PAYMENT",
+      "status": "MISMATCH",
+      "findings": [
+        "LATE_SETTLEMENT",
+        "AMOUNT_MISMATCH"
+      ],
+      "platform_amount": "2675.58",
+      "bank_amount": "2675.57",
+      "difference": "-0.01",
+      "transaction_date": "2026-10-06 09:58:03+00:00",
+      "settlement_date": "2026-10-09 09:58:03+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.; Platform and bank amounts differ.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000032",
+        "transaction_date": "2026-10-06 09:58:03+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2675.58",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000038",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000029",
+          "transaction_id": "TXN000032",
+          "settlement_date": "2026-10-09 09:58:03+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "2675.57",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000021"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000033",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "4353.30",
+      "bank_amount": "4353.30",
+      "difference": "0.00",
+      "transaction_date": "2026-10-13 18:52:13+00:00",
+      "settlement_date": "2026-10-14 18:52:13+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000033",
+        "transaction_date": "2026-10-13 18:52:13+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "4353.30",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000065",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000030",
+          "transaction_id": "TXN000033",
+          "settlement_date": "2026-10-14 18:52:13+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "4353.30",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000008"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000034",
+      "transaction_type": "PAYMENT",
+      "status": "MISMATCH",
+      "findings": [
+        "AMOUNT_MISMATCH"
+      ],
+      "platform_amount": "7622.00",
+      "bank_amount": "7621.99",
+      "difference": "-0.01",
+      "transaction_date": "2026-10-06 03:58:39+00:00",
+      "settlement_date": "2026-10-08 03:58:39+00:00",
+      "explanation": "Platform and bank amounts differ.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000034",
+        "transaction_date": "2026-10-06 03:58:39+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "7622.00",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000081",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000031",
+          "transaction_id": "TXN000034",
+          "settlement_date": "2026-10-08 03:58:39+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "7621.99",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000022"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000035",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "2991.46",
+      "bank_amount": "2991.46",
+      "difference": "0.00",
+      "transaction_date": "2026-10-30 13:30:06+00:00",
+      "settlement_date": "2026-10-31 13:30:06+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000035",
+        "transaction_date": "2026-10-30 13:30:06+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2991.46",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000026",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000032",
+          "transaction_id": "TXN000035",
+          "settlement_date": "2026-10-31 13:30:06+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "2991.46",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000011"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000036",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "1536.86",
+      "bank_amount": "1536.86",
+      "difference": "0.00",
+      "transaction_date": "2026-10-27 04:25:19+00:00",
+      "settlement_date": "2026-10-30 04:25:19+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000036",
+        "transaction_date": "2026-10-27 04:25:19+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1536.86",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000100",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000033",
+          "transaction_id": "TXN000036",
+          "settlement_date": "2026-10-30 04:25:19+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "1536.86",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000013"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000037",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [
+        "CROSS_MONTH_SETTLEMENT"
+      ],
+      "platform_amount": "9225.12",
+      "bank_amount": "9225.12",
+      "difference": "0.00",
+      "transaction_date": "2026-10-30 01:49:15+00:00",
+      "settlement_date": "2026-11-01 01:49:15+00:00",
+      "explanation": "The settlement occurred in a different calendar month from the transaction.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000037",
+        "transaction_date": "2026-10-30 01:49:15+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9225.12",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000042",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000034",
+          "transaction_id": "TXN000037",
+          "settlement_date": "2026-11-01 01:49:15+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "9225.12",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000016"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000038",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "4891.17",
+      "bank_amount": "4891.17",
+      "difference": "0.00",
+      "transaction_date": "2026-10-18 14:54:11+00:00",
+      "settlement_date": "2026-10-19 14:54:11+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000038",
+        "transaction_date": "2026-10-18 14:54:11+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "4891.17",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000040",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000035",
+          "transaction_id": "TXN000038",
+          "settlement_date": "2026-10-19 14:54:11+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "4891.17",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000005"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000039",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "2402.13",
+      "bank_amount": "2402.13",
+      "difference": "0.00",
+      "transaction_date": "2026-10-28 13:01:07+00:00",
+      "settlement_date": "2026-10-31 13:01:07+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000039",
+        "transaction_date": "2026-10-28 13:01:07+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2402.13",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000011",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000036",
+          "transaction_id": "TXN000039",
+          "settlement_date": "2026-10-31 13:01:07+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "2402.13",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000011"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000040",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "865.68",
+      "bank_amount": "865.68",
+      "difference": "0.00",
+      "transaction_date": "2026-10-04 08:38:18+00:00",
+      "settlement_date": "2026-10-07 08:38:18+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000040",
+        "transaction_date": "2026-10-04 08:38:18+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "865.68",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000098",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000037",
+          "transaction_id": "TXN000040",
+          "settlement_date": "2026-10-07 08:38:18+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "865.68",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000006"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000041",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT",
+        "CROSS_MONTH_SETTLEMENT"
+      ],
+      "platform_amount": "5331.73",
+      "bank_amount": "5331.73",
+      "difference": "0.00",
+      "transaction_date": "2026-10-24 01:44:38+00:00",
+      "settlement_date": "2026-11-27 01:44:38+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.; The settlement occurred in a different calendar month from the transaction.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000041",
+        "transaction_date": "2026-10-24 01:44:38+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5331.73",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000071",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000038",
+          "transaction_id": "TXN000041",
+          "settlement_date": "2026-11-27 01:44:38+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "5331.73",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000023"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000042",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT",
+        "CROSS_MONTH_SETTLEMENT"
+      ],
+      "platform_amount": "1659.62",
+      "bank_amount": "1659.62",
+      "difference": "0.00",
+      "transaction_date": "2026-10-30 10:43:59+00:00",
+      "settlement_date": "2026-11-02 10:43:59+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.; The settlement occurred in a different calendar month from the transaction.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000042",
+        "transaction_date": "2026-10-30 10:43:59+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1659.62",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000055",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000039",
+          "transaction_id": "TXN000042",
+          "settlement_date": "2026-11-02 10:43:59+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "1659.62",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000024"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000043",
+      "transaction_type": "PAYMENT",
+      "status": "MISMATCH",
+      "findings": [
+        "LATE_SETTLEMENT",
+        "AMOUNT_MISMATCH"
+      ],
+      "platform_amount": "9643.99",
+      "bank_amount": "9644.00",
+      "difference": "0.01",
+      "transaction_date": "2026-10-10 18:21:28+00:00",
+      "settlement_date": "2026-10-13 18:21:28+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.; Platform and bank amounts differ.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000043",
+        "transaction_date": "2026-10-10 18:21:28+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9643.99",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000092",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000040",
+          "transaction_id": "TXN000043",
+          "settlement_date": "2026-10-13 18:21:28+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "9644.00",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000009"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000044",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "3124.05",
+      "bank_amount": "3124.05",
+      "difference": "0.00",
+      "transaction_date": "2026-10-19 03:03:59+00:00",
+      "settlement_date": "2026-10-22 03:03:59+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000044",
+        "transaction_date": "2026-10-19 03:03:59+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "3124.05",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000057",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000041",
+          "transaction_id": "TXN000044",
+          "settlement_date": "2026-10-22 03:03:59+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "3124.05",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000015"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000045",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "8997.14",
+      "bank_amount": "8997.14",
+      "difference": "0.00",
+      "transaction_date": "2026-10-13 00:49:51+00:00",
+      "settlement_date": "2026-10-16 00:49:51+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000045",
+        "transaction_date": "2026-10-13 00:49:51+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "8997.14",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000029",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000042",
+          "transaction_id": "TXN000045",
+          "settlement_date": "2026-10-16 00:49:51+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "8997.14",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000025"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000046",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "649.62",
+      "bank_amount": "0.00",
+      "difference": "0.00",
+      "transaction_date": "2026-10-27 21:21:55+00:00",
+      "settlement_date": null,
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000046",
+        "transaction_date": "2026-10-27 21:21:55+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "649.62",
+        "currency": "INR",
+        "payment_status": "FAILED",
+        "customer_id": "CUS000030",
+        "original_transaction_id": ""
+      },
+      "bank_records": []
+    },
+    {
+      "transaction_id": "TXN000047",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "5888.52",
+      "bank_amount": "0.00",
+      "difference": "0.00",
+      "transaction_date": "2026-10-31 15:17:17+00:00",
+      "settlement_date": null,
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000047",
+        "transaction_date": "2026-10-31 15:17:17+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5888.52",
+        "currency": "INR",
+        "payment_status": "FAILED",
+        "customer_id": "CUS000008",
+        "original_transaction_id": ""
+      },
+      "bank_records": []
+    },
+    {
+      "transaction_id": "TXN000048",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "2297.13",
+      "bank_amount": "2297.13",
+      "difference": "0.00",
+      "transaction_date": "2026-10-17 00:58:37+00:00",
+      "settlement_date": "2026-10-18 00:58:37+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000048",
+        "transaction_date": "2026-10-17 00:58:37+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2297.13",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000010",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000043",
+          "transaction_id": "TXN000048",
+          "settlement_date": "2026-10-18 00:58:37+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "2297.13",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000026"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000049",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "5146.42",
+      "bank_amount": "5146.42",
+      "difference": "0.00",
+      "transaction_date": "2026-10-24 13:32:55+00:00",
+      "settlement_date": "2026-10-26 13:32:55+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000049",
+        "transaction_date": "2026-10-24 13:32:55+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5146.42",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000028",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000044",
+          "transaction_id": "TXN000049",
+          "settlement_date": "2026-10-26 13:32:55+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "5146.42",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000019"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000050",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "5396.95",
+      "bank_amount": "5396.95",
+      "difference": "0.00",
+      "transaction_date": "2026-10-28 17:18:48+00:00",
+      "settlement_date": "2026-10-30 17:18:48+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000050",
+        "transaction_date": "2026-10-28 17:18:48+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5396.95",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000074",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000045",
+          "transaction_id": "TXN000050",
+          "settlement_date": "2026-10-30 17:18:48+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "5396.95",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000013"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000051",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "4731.98",
+      "bank_amount": "4731.98",
+      "difference": "0.00",
+      "transaction_date": "2026-10-20 18:15:33+00:00",
+      "settlement_date": "2026-10-21 18:15:33+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000051",
+        "transaction_date": "2026-10-20 18:15:33+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "4731.98",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000025",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000046",
+          "transaction_id": "TXN000051",
+          "settlement_date": "2026-10-21 18:15:33+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "4731.98",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000007"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000052",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "952.31",
+      "bank_amount": "952.31",
+      "difference": "0.00",
+      "transaction_date": "2026-10-18 04:47:11+00:00",
+      "settlement_date": "2026-10-21 04:47:11+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000052",
+        "transaction_date": "2026-10-18 04:47:11+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "952.31",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000055",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000047",
+          "transaction_id": "TXN000052",
+          "settlement_date": "2026-10-21 04:47:11+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "952.31",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000007"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000053",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "4116.91",
+      "bank_amount": "4116.91",
+      "difference": "0.00",
+      "transaction_date": "2026-10-03 15:06:50+00:00",
+      "settlement_date": "2026-10-05 15:06:50+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000053",
+        "transaction_date": "2026-10-03 15:06:50+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "4116.91",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000087",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000048",
+          "transaction_id": "TXN000053",
+          "settlement_date": "2026-10-05 15:06:50+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "4116.91",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000017"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000054",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "6538.02",
+      "bank_amount": "6538.02",
+      "difference": "0.00",
+      "transaction_date": "2026-10-03 22:37:07+00:00",
+      "settlement_date": "2026-10-06 22:37:07+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000054",
+        "transaction_date": "2026-10-03 22:37:07+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "6538.02",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000052",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000049",
+          "transaction_id": "TXN000054",
+          "settlement_date": "2026-10-06 22:37:07+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "6538.02",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000027"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000055",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "7284.85",
+      "bank_amount": "7284.85",
+      "difference": "0.00",
+      "transaction_date": "2026-10-06 07:18:27+00:00",
+      "settlement_date": "2026-10-08 07:18:27+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000055",
+        "transaction_date": "2026-10-06 07:18:27+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "7284.85",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000032",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000050",
+          "transaction_id": "TXN000055",
+          "settlement_date": "2026-10-08 07:18:27+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "7284.85",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000022"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000056",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "1923.98",
+      "bank_amount": "1923.98",
+      "difference": "0.00",
+      "transaction_date": "2026-10-07 19:19:27+00:00",
+      "settlement_date": "2026-10-10 19:19:27+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000056",
+        "transaction_date": "2026-10-07 19:19:27+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1923.98",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000055",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000051",
+          "transaction_id": "TXN000056",
+          "settlement_date": "2026-10-10 19:19:27+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "1923.98",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000028"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000057",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "1843.05",
+      "bank_amount": "1843.05",
+      "difference": "0.00",
+      "transaction_date": "2026-10-04 15:49:47+00:00",
+      "settlement_date": "2026-10-05 15:49:47+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000057",
+        "transaction_date": "2026-10-04 15:49:47+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1843.05",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000057",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000052",
+          "transaction_id": "TXN000057",
+          "settlement_date": "2026-10-05 15:49:47+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "1843.05",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000017"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000058",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "8082.14",
+      "bank_amount": "8082.14",
+      "difference": "0.00",
+      "transaction_date": "2026-10-05 18:04:18+00:00",
+      "settlement_date": "2026-10-08 18:04:18+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000058",
+        "transaction_date": "2026-10-05 18:04:18+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "8082.14",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000007",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000053",
+          "transaction_id": "TXN000058",
+          "settlement_date": "2026-10-08 18:04:18+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "8082.14",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000022"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000059",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "6524.93",
+      "bank_amount": "6524.93",
+      "difference": "0.00",
+      "transaction_date": "2026-10-01 17:11:38+00:00",
+      "settlement_date": "2026-10-03 17:11:38+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000059",
+        "transaction_date": "2026-10-01 17:11:38+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "6524.93",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000012",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000054",
+          "transaction_id": "TXN000059",
+          "settlement_date": "2026-10-03 17:11:38+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "6524.93",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000003"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000060",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "9264.41",
+      "bank_amount": "9264.41",
+      "difference": "0.00",
+      "transaction_date": "2026-10-09 01:45:59+00:00",
+      "settlement_date": "2026-10-12 01:45:59+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000060",
+        "transaction_date": "2026-10-09 01:45:59+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9264.41",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000053",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000055",
+          "transaction_id": "TXN000060",
+          "settlement_date": "2026-10-12 01:45:59+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "9264.41",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000029"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000061",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "4861.55",
+      "bank_amount": "4861.55",
+      "difference": "0.00",
+      "transaction_date": "2026-10-20 11:14:44+00:00",
+      "settlement_date": "2026-10-22 11:14:44+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000061",
+        "transaction_date": "2026-10-20 11:14:44+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "4861.55",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000008",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000056",
+          "transaction_id": "TXN000061",
+          "settlement_date": "2026-10-22 11:14:44+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "4861.55",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000015"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000062",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "1654.72",
+      "bank_amount": "0.00",
+      "difference": "0.00",
+      "transaction_date": "2026-10-19 22:52:27+00:00",
+      "settlement_date": null,
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000062",
+        "transaction_date": "2026-10-19 22:52:27+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1654.72",
+        "currency": "INR",
+        "payment_status": "FAILED",
+        "customer_id": "CUS000034",
+        "original_transaction_id": ""
+      },
+      "bank_records": []
+    },
+    {
+      "transaction_id": "TXN000063",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "9265.92",
+      "bank_amount": "9265.92",
+      "difference": "0.00",
+      "transaction_date": "2026-10-14 20:20:21+00:00",
+      "settlement_date": "2026-10-17 20:20:21+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000063",
+        "transaction_date": "2026-10-14 20:20:21+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9265.92",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000055",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000057",
+          "transaction_id": "TXN000063",
+          "settlement_date": "2026-10-17 20:20:21+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "9265.92",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000030"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000064",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "6968.95",
+      "bank_amount": "6968.95",
+      "difference": "0.00",
+      "transaction_date": "2026-10-27 23:31:01+00:00",
+      "settlement_date": "2026-10-29 23:31:01+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000064",
+        "transaction_date": "2026-10-27 23:31:01+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "6968.95",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000085",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000058",
+          "transaction_id": "TXN000064",
+          "settlement_date": "2026-10-29 23:31:01+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "6968.95",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000001"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000065",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "7186.90",
+      "bank_amount": "7186.90",
+      "difference": "0.00",
+      "transaction_date": "2026-10-15 09:41:22+00:00",
+      "settlement_date": "2026-10-17 09:41:22+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000065",
+        "transaction_date": "2026-10-15 09:41:22+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "7186.90",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000028",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000059",
+          "transaction_id": "TXN000065",
+          "settlement_date": "2026-10-17 09:41:22+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "7186.90",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000030"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000066",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "9687.41",
+      "bank_amount": "9687.41",
+      "difference": "0.00",
+      "transaction_date": "2026-10-27 07:42:11+00:00",
+      "settlement_date": "2026-10-29 07:42:11+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000066",
+        "transaction_date": "2026-10-27 07:42:11+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9687.41",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000008",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000060",
+          "transaction_id": "TXN000066",
+          "settlement_date": "2026-10-29 07:42:11+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "9687.41",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000001"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000067",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT",
+        "CROSS_MONTH_SETTLEMENT"
+      ],
+      "platform_amount": "7482.28",
+      "bank_amount": "7482.28",
+      "difference": "0.00",
+      "transaction_date": "2026-10-29 08:36:58+00:00",
+      "settlement_date": "2026-11-01 08:36:58+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.; The settlement occurred in a different calendar month from the transaction.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000067",
+        "transaction_date": "2026-10-29 08:36:58+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "7482.28",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000062",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000061",
+          "transaction_id": "TXN000067",
+          "settlement_date": "2026-11-01 08:36:58+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "7482.28",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000016"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000068",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "5033.48",
+      "bank_amount": "5033.48",
+      "difference": "0.00",
+      "transaction_date": "2026-10-08 15:25:20+00:00",
+      "settlement_date": "2026-10-10 15:25:20+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000068",
+        "transaction_date": "2026-10-08 15:25:20+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5033.48",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000008",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000062",
+          "transaction_id": "TXN000068",
+          "settlement_date": "2026-10-10 15:25:20+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "5033.48",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000028"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000069",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "9608.18",
+      "bank_amount": "9608.18",
+      "difference": "0.00",
+      "transaction_date": "2026-10-10 00:30:06+00:00",
+      "settlement_date": "2026-10-13 00:30:06+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000069",
+        "transaction_date": "2026-10-10 00:30:06+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9608.18",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000009",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000063",
+          "transaction_id": "TXN000069",
+          "settlement_date": "2026-10-13 00:30:06+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "9608.18",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000009"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000070",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "5954.40",
+      "bank_amount": "5954.40",
+      "difference": "0.00",
+      "transaction_date": "2026-10-12 10:01:56+00:00",
+      "settlement_date": "2026-10-13 10:01:56+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000070",
+        "transaction_date": "2026-10-12 10:01:56+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5954.40",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000052",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000064",
+          "transaction_id": "TXN000070",
+          "settlement_date": "2026-10-13 10:01:56+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "5954.40",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000009"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000071",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "1207.67",
+      "bank_amount": "1207.67",
+      "difference": "0.00",
+      "transaction_date": "2026-10-12 22:51:42+00:00",
+      "settlement_date": "2026-10-13 22:51:42+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000071",
+        "transaction_date": "2026-10-12 22:51:42+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1207.67",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000075",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000065",
+          "transaction_id": "TXN000071",
+          "settlement_date": "2026-10-13 22:51:42+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "1207.67",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000009"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000072",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "5949.25",
+      "bank_amount": "5949.25",
+      "difference": "0.00",
+      "transaction_date": "2026-10-21 08:25:56+00:00",
+      "settlement_date": "2026-10-23 08:25:56+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000072",
+        "transaction_date": "2026-10-21 08:25:56+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5949.25",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000085",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000066",
+          "transaction_id": "TXN000072",
+          "settlement_date": "2026-10-23 08:25:56+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "5949.25",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000002"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000073",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "5840.89",
+      "bank_amount": "5840.89",
+      "difference": "0.00",
+      "transaction_date": "2026-10-13 15:48:50+00:00",
+      "settlement_date": "2026-10-16 15:48:50+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000073",
+        "transaction_date": "2026-10-13 15:48:50+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5840.89",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000027",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000067",
+          "transaction_id": "TXN000073",
+          "settlement_date": "2026-10-16 15:48:50+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "5840.89",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000025"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000074",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "6700.56",
+      "bank_amount": "6700.56",
+      "difference": "0.00",
+      "transaction_date": "2026-10-13 21:27:48+00:00",
+      "settlement_date": "2026-10-15 21:27:48+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000074",
+        "transaction_date": "2026-10-13 21:27:48+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "6700.56",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000051",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000068",
+          "transaction_id": "TXN000074",
+          "settlement_date": "2026-10-15 21:27:48+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "6700.56",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000010"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000075",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "1317.47",
+      "bank_amount": "1317.47",
+      "difference": "0.00",
+      "transaction_date": "2026-10-23 04:42:18+00:00",
+      "settlement_date": "2026-10-26 04:42:18+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000075",
+        "transaction_date": "2026-10-23 04:42:18+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1317.47",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000041",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000069",
+          "transaction_id": "TXN000075",
+          "settlement_date": "2026-10-26 04:42:18+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "1317.47",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000019"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000076",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "9290.89",
+      "bank_amount": "9290.89",
+      "difference": "0.00",
+      "transaction_date": "2026-10-01 10:51:11+00:00",
+      "settlement_date": "2026-10-04 10:51:11+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000076",
+        "transaction_date": "2026-10-01 10:51:11+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9290.89",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000059",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000070",
+          "transaction_id": "TXN000076",
+          "settlement_date": "2026-10-04 10:51:11+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "9290.89",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000014"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000077",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "6215.38",
+      "bank_amount": "6215.38",
+      "difference": "0.00",
+      "transaction_date": "2026-10-05 20:29:11+00:00",
+      "settlement_date": "2026-10-06 20:29:11+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000077",
+        "transaction_date": "2026-10-05 20:29:11+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "6215.38",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000010",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000071",
+          "transaction_id": "TXN000077",
+          "settlement_date": "2026-10-06 20:29:11+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "6215.38",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000027"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000078",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "5380.97",
+      "bank_amount": "5380.97",
+      "difference": "0.00",
+      "transaction_date": "2026-10-07 10:19:23+00:00",
+      "settlement_date": "2026-10-10 10:19:23+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000078",
+        "transaction_date": "2026-10-07 10:19:23+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "5380.97",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000045",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000072",
+          "transaction_id": "TXN000078",
+          "settlement_date": "2026-10-10 10:19:23+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "5380.97",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000028"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000079",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "8809.83",
+      "bank_amount": "8809.83",
+      "difference": "0.00",
+      "transaction_date": "2026-10-18 22:31:48+00:00",
+      "settlement_date": "2026-10-21 22:31:48+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000079",
+        "transaction_date": "2026-10-18 22:31:48+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "8809.83",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000037",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000073",
+          "transaction_id": "TXN000079",
+          "settlement_date": "2026-10-21 22:31:48+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "8809.83",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000007"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000080",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "1585.89",
+      "bank_amount": "1585.89",
+      "difference": "0.00",
+      "transaction_date": "2026-10-15 16:27:28+00:00",
+      "settlement_date": "2026-10-17 16:27:28+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000080",
+        "transaction_date": "2026-10-15 16:27:28+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1585.89",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000079",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000074",
+          "transaction_id": "TXN000080",
+          "settlement_date": "2026-10-17 16:27:28+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "1585.89",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000030"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000081",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "9838.69",
+      "bank_amount": "9838.69",
+      "difference": "0.00",
+      "transaction_date": "2026-10-26 16:15:38+00:00",
+      "settlement_date": "2026-10-28 16:15:38+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000081",
+        "transaction_date": "2026-10-26 16:15:38+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9838.69",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000002",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000075",
+          "transaction_id": "TXN000081",
+          "settlement_date": "2026-10-28 16:15:38+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "9838.69",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000031"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000082",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "6681.95",
+      "bank_amount": "6681.95",
+      "difference": "0.00",
+      "transaction_date": "2026-10-06 00:41:13+00:00",
+      "settlement_date": "2026-10-09 00:41:13+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000082",
+        "transaction_date": "2026-10-06 00:41:13+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "6681.95",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000018",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000076",
+          "transaction_id": "TXN000082",
+          "settlement_date": "2026-10-09 00:41:13+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "6681.95",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000021"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000083",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "2652.01",
+      "bank_amount": "2652.01",
+      "difference": "0.00",
+      "transaction_date": "2026-10-27 20:33:08+00:00",
+      "settlement_date": "2026-10-28 20:33:08+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000083",
+        "transaction_date": "2026-10-27 20:33:08+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2652.01",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000020",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000077",
+          "transaction_id": "TXN000083",
+          "settlement_date": "2026-10-28 20:33:08+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "2652.01",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000031"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000084",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "2730.76",
+      "bank_amount": "2730.76",
+      "difference": "0.00",
+      "transaction_date": "2026-10-17 15:29:04+00:00",
+      "settlement_date": "2026-10-19 15:29:04+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000084",
+        "transaction_date": "2026-10-17 15:29:04+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2730.76",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000027",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000078",
+          "transaction_id": "TXN000084",
+          "settlement_date": "2026-10-19 15:29:04+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "2730.76",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000005"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000085",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "6878.10",
+      "bank_amount": "6878.10",
+      "difference": "0.00",
+      "transaction_date": "2026-10-25 12:50:39+00:00",
+      "settlement_date": "2026-10-27 12:50:39+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000085",
+        "transaction_date": "2026-10-25 12:50:39+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "6878.10",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000063",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000079",
+          "transaction_id": "TXN000085",
+          "settlement_date": "2026-10-27 12:50:39+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "6878.10",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000023"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000086",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "2518.70",
+      "bank_amount": "2518.70",
+      "difference": "0.00",
+      "transaction_date": "2026-10-03 11:11:06+00:00",
+      "settlement_date": "2026-10-04 11:11:06+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000086",
+        "transaction_date": "2026-10-03 11:11:06+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2518.70",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000012",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000080",
+          "transaction_id": "TXN000086",
+          "settlement_date": "2026-10-04 11:11:06+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "2518.70",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000014"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000087",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "6346.50",
+      "bank_amount": "6346.50",
+      "difference": "0.00",
+      "transaction_date": "2026-10-03 03:21:53+00:00",
+      "settlement_date": "2026-10-05 03:21:53+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000087",
+        "transaction_date": "2026-10-03 03:21:53+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "6346.50",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000001",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000081",
+          "transaction_id": "TXN000087",
+          "settlement_date": "2026-10-05 03:21:53+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "6346.50",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000017"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000088",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "3342.23",
+      "bank_amount": "3342.23",
+      "difference": "0.00",
+      "transaction_date": "2026-10-13 17:12:00+00:00",
+      "settlement_date": "2026-10-16 17:12:00+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000088",
+        "transaction_date": "2026-10-13 17:12:00+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "3342.23",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000021",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000082",
+          "transaction_id": "TXN000088",
+          "settlement_date": "2026-10-16 17:12:00+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "3342.23",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000025"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000089",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "7414.90",
+      "bank_amount": "7414.90",
+      "difference": "0.00",
+      "transaction_date": "2026-10-21 18:17:28+00:00",
+      "settlement_date": "2026-10-24 18:17:28+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000089",
+        "transaction_date": "2026-10-21 18:17:28+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "7414.90",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000072",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000083",
+          "transaction_id": "TXN000089",
+          "settlement_date": "2026-10-24 18:17:28+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "7414.90",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000018"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000090",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "DUPLICATE_BANK_TRANSACTION"
+      ],
+      "platform_amount": "106.60",
+      "bank_amount": "0.00",
+      "difference": "0.00",
+      "transaction_date": "2026-10-08 05:39:38+00:00",
+      "settlement_date": null,
+      "explanation": "Multiple bank settlements reference this transaction; matching is ambiguous.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000090",
+        "transaction_date": "2026-10-08 05:39:38+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "106.60",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000070",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000084",
+          "transaction_id": "TXN000090",
+          "settlement_date": "2026-10-11 05:39:38+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "106.60",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000012"
+        },
+        {
+          "settlement_id": "SET000084",
+          "transaction_id": "TXN000090",
+          "settlement_date": "2026-10-11 05:39:38+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "106.60",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000012"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000091",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT",
+        "CROSS_MONTH_SETTLEMENT"
+      ],
+      "platform_amount": "369.92",
+      "bank_amount": "369.92",
+      "difference": "0.00",
+      "transaction_date": "2026-10-27 19:44:18+00:00",
+      "settlement_date": "2026-11-29 19:44:18+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.; The settlement occurred in a different calendar month from the transaction.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000091",
+        "transaction_date": "2026-10-27 19:44:18+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "369.92",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000019",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000085",
+          "transaction_id": "TXN000091",
+          "settlement_date": "2026-11-29 19:44:18+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "369.92",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000001"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000092",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "4303.57",
+      "bank_amount": "0.00",
+      "difference": "0.00",
+      "transaction_date": "2026-10-18 16:50:59+00:00",
+      "settlement_date": null,
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000092",
+        "transaction_date": "2026-10-18 16:50:59+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "4303.57",
+        "currency": "INR",
+        "payment_status": "FAILED",
+        "customer_id": "CUS000006",
+        "original_transaction_id": ""
+      },
+      "bank_records": []
+    },
+    {
+      "transaction_id": "TXN000093",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "8990.26",
+      "bank_amount": "8990.26",
+      "difference": "0.00",
+      "transaction_date": "2026-10-13 02:43:23+00:00",
+      "settlement_date": "2026-10-15 02:43:23+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000093",
+        "transaction_date": "2026-10-13 02:43:23+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "8990.26",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000086",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000086",
+          "transaction_id": "TXN000093",
+          "settlement_date": "2026-10-15 02:43:23+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "8990.26",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000010"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000094",
+      "transaction_type": "PAYMENT",
+      "status": "MISMATCH",
+      "findings": [
+        "AMOUNT_MISMATCH"
+      ],
+      "platform_amount": "1036.91",
+      "bank_amount": "1036.92",
+      "difference": "0.01",
+      "transaction_date": "2026-10-20 17:27:50+00:00",
+      "settlement_date": "2026-10-22 17:27:50+00:00",
+      "explanation": "Platform and bank amounts differ.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000094",
+        "transaction_date": "2026-10-20 17:27:50+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1036.91",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000080",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000087",
+          "transaction_id": "TXN000094",
+          "settlement_date": "2026-10-22 17:27:50+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "1036.92",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000015"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000095",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "7497.28",
+      "bank_amount": "7497.28",
+      "difference": "0.00",
+      "transaction_date": "2026-10-12 11:49:08+00:00",
+      "settlement_date": "2026-10-14 11:49:08+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000095",
+        "transaction_date": "2026-10-12 11:49:08+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "7497.28",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000021",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000088",
+          "transaction_id": "TXN000095",
+          "settlement_date": "2026-10-14 11:49:08+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "7497.28",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000008"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000096",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "DUPLICATE_BANK_TRANSACTION"
+      ],
+      "platform_amount": "9762.30",
+      "bank_amount": "0.00",
+      "difference": "0.00",
+      "transaction_date": "2026-10-21 00:21:28+00:00",
+      "settlement_date": null,
+      "explanation": "Multiple bank settlements reference this transaction; matching is ambiguous.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000096",
+        "transaction_date": "2026-10-21 00:21:28+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9762.30",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000004",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000089",
+          "transaction_id": "TXN000096",
+          "settlement_date": "2026-10-24 00:21:28+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "9762.30",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000018"
+        },
+        {
+          "settlement_id": "SET000089",
+          "transaction_id": "TXN000096",
+          "settlement_date": "2026-10-24 00:21:28+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "9762.30",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000018"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000097",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "1801.81",
+      "bank_amount": "1801.81",
+      "difference": "0.00",
+      "transaction_date": "2026-10-20 23:40:50+00:00",
+      "settlement_date": "2026-10-21 23:40:50+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000097",
+        "transaction_date": "2026-10-20 23:40:50+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "1801.81",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000086",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000090",
+          "transaction_id": "TXN000097",
+          "settlement_date": "2026-10-21 23:40:50+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "1801.81",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000007"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000098",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "8642.00",
+      "bank_amount": "8642.00",
+      "difference": "0.00",
+      "transaction_date": "2026-10-13 22:51:04+00:00",
+      "settlement_date": "2026-10-16 22:51:04+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000098",
+        "transaction_date": "2026-10-13 22:51:04+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "8642.00",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000021",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000091",
+          "transaction_id": "TXN000098",
+          "settlement_date": "2026-10-16 22:51:04+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "8642.00",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000025"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000099",
+      "transaction_type": "PAYMENT",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "7875.87",
+      "bank_amount": "7875.87",
+      "difference": "0.00",
+      "transaction_date": "2026-10-02 21:07:02+00:00",
+      "settlement_date": "2026-10-04 21:07:02+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "TXN000099",
+        "transaction_date": "2026-10-02 21:07:02+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "7875.87",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000061",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000092",
+          "transaction_id": "TXN000099",
+          "settlement_date": "2026-10-04 21:07:02+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "7875.87",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000014"
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN000100",
+      "transaction_type": "PAYMENT",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT",
+        "CROSS_MONTH_SETTLEMENT"
+      ],
+      "platform_amount": "2232.11",
+      "bank_amount": "2232.11",
+      "difference": "0.00",
+      "transaction_date": "2026-10-23 08:17:31+00:00",
+      "settlement_date": "2026-11-26 08:17:31+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.; The settlement occurred in a different calendar month from the transaction.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "TXN000100",
+        "transaction_date": "2026-10-23 08:17:31+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "2232.11",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000045",
+        "original_transaction_id": ""
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000093",
+          "transaction_id": "TXN000100",
+          "settlement_date": "2026-11-26 08:17:31+00:00",
+          "transaction_type": "PAYMENT",
+          "amount": "2232.11",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000019"
+        }
+      ]
+    },
+    {
+      "transaction_id": "REF000001",
+      "transaction_type": "REFUND",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "9643.99",
+      "bank_amount": "9643.99",
+      "difference": "0.00",
+      "transaction_date": "2026-10-10 19:14:28+00:00",
+      "settlement_date": "2026-10-11 19:14:28+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "REF000001",
+        "transaction_date": "2026-10-10 19:14:28+00:00",
+        "transaction_type": "REFUND",
+        "amount": "9643.99",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000092",
+        "original_transaction_id": "TXN000043"
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000094",
+          "transaction_id": "REF000001",
+          "settlement_date": "2026-10-11 19:14:28+00:00",
+          "transaction_type": "REFUND",
+          "amount": "9643.99",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000012"
+        }
+      ]
+    },
+    {
+      "transaction_id": "REF000002",
+      "transaction_type": "REFUND",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "4353.30",
+      "bank_amount": "4353.30",
+      "difference": "0.00",
+      "transaction_date": "2026-10-14 17:28:13+00:00",
+      "settlement_date": "2026-10-17 17:28:13+00:00",
+      "explanation": "The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "REF000002",
+        "transaction_date": "2026-10-14 17:28:13+00:00",
+        "transaction_type": "REFUND",
+        "amount": "4353.30",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000065",
+        "original_transaction_id": "TXN000033"
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000095",
+          "transaction_id": "REF000002",
+          "settlement_date": "2026-10-17 17:28:13+00:00",
+          "transaction_type": "REFUND",
+          "amount": "4353.30",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000030"
+        }
+      ]
+    },
+    {
+      "transaction_id": "REF000003",
+      "transaction_type": "REFUND",
+      "status": "MATCHED",
+      "findings": [],
+      "platform_amount": "2675.58",
+      "bank_amount": "2675.58",
+      "difference": "0.00",
+      "transaction_date": "2026-10-06 16:38:03+00:00",
+      "settlement_date": "2026-10-07 16:38:03+00:00",
+      "explanation": "Platform and bank records match.",
+      "financially_reconciled": true,
+      "platform_record": {
+        "transaction_id": "REF000003",
+        "transaction_date": "2026-10-06 16:38:03+00:00",
+        "transaction_type": "REFUND",
+        "amount": "2675.58",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000038",
+        "original_transaction_id": "TXN000032"
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000096",
+          "transaction_id": "REF000003",
+          "settlement_date": "2026-10-07 16:38:03+00:00",
+          "transaction_type": "REFUND",
+          "amount": "2675.58",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000006"
+        }
+      ]
+    },
+    {
+      "transaction_id": "REF000004",
+      "transaction_type": "REFUND",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "ORPHAN_REFUND",
+        "AMOUNT_MISMATCH"
+      ],
+      "platform_amount": "1843.05",
+      "bank_amount": "1843.06",
+      "difference": "0.01",
+      "transaction_date": "2026-10-04 15:52:47+00:00",
+      "settlement_date": "2026-10-06 15:52:47+00:00",
+      "explanation": "The refund references an original payment that does not exist uniquely.; Platform and bank amounts differ.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "REF000004",
+        "transaction_date": "2026-10-04 15:52:47+00:00",
+        "transaction_type": "REFUND",
+        "amount": "1843.05",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000057",
+        "original_transaction_id": "TXN999001"
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000097",
+          "transaction_id": "REF000004",
+          "settlement_date": "2026-10-06 15:52:47+00:00",
+          "transaction_type": "REFUND",
+          "amount": "1843.06",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000027"
+        }
+      ]
+    },
+    {
+      "transaction_id": "REF000005",
+      "transaction_type": "REFUND",
+      "status": "REVIEW_REQUIRED",
+      "findings": [
+        "ORPHAN_REFUND",
+        "LATE_SETTLEMENT"
+      ],
+      "platform_amount": "2297.13",
+      "bank_amount": "2297.13",
+      "difference": "0.00",
+      "transaction_date": "2026-10-17 01:02:37+00:00",
+      "settlement_date": "2026-10-20 01:02:37+00:00",
+      "explanation": "The refund references an original payment that does not exist uniquely.; The settlement occurs after the configured calendar-day settlement window.",
+      "financially_reconciled": false,
+      "platform_record": {
+        "transaction_id": "REF000005",
+        "transaction_date": "2026-10-17 01:02:37+00:00",
+        "transaction_type": "REFUND",
+        "amount": "2297.13",
+        "currency": "INR",
+        "payment_status": "SUCCESS",
+        "customer_id": "CUS000010",
+        "original_transaction_id": "TXN999002"
+      },
+      "bank_records": [
+        {
+          "settlement_id": "SET000098",
+          "transaction_id": "REF000005",
+          "settlement_date": "2026-10-20 01:02:37+00:00",
+          "transaction_type": "REFUND",
+          "amount": "2297.13",
+          "currency": "INR",
+          "settlement_status": "SETTLED",
+          "batch_id": "BAT000004"
+        }
+      ]
+    }
+  ],
+  "validation_errors": [],
+  "reconciliation_metadata": {
+    "as_of_date": "2026-10-31",
+    "settlement_delay_days": 2,
+    "rounding_threshold": "0.01",
+    "timezone": "UTC",
+    "calendar_day_assumption": true,
+    "status_precedence": [
+      "INVALID",
+      "UNMATCHED_BANK",
+      "REVIEW_REQUIRED",
+      "MISMATCH",
+      "OVERDUE",
+      "PENDING",
+      "MATCHED"
+    ]
+  }
+}

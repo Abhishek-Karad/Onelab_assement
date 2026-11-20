@@ -1,0 +1,23 @@
+{
+  "random_seed": 42,
+  "generator_configuration": {
+    "payment_count": 50,
+    "start_date": "2024-01-01",
+    "end_date": "2024-03-31",
+    "failed_payment_percentage": 5.0,
+    "refund_percentage": 10.0,
+    "min_amount": "100",
+    "max_amount": "10000",
+    "min_settlement_delay": 1,
+    "max_settlement_delay": 2,
+    "seed": 42,
+    "inject_discrepancies": false,
+    "cross_month_count": 0,
+    "rounding_count": 0,
+    "duplicate_count": 0,
+    "orphan_refund_count": 0
+  },
+  "total_platform_records": 55,
+  "total_bank_records": 53,
+  "injected_discrepancies": []
+}

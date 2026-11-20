@@ -1,0 +1,288 @@
+{
+  "random_seed": 42,
+  "generator_configuration": {
+    "payment_count": 100,
+    "start_date": "2026-10-01",
+    "end_date": "2026-10-31",
+    "failed_payment_percentage": 5.0,
+    "refund_percentage": 5.0,
+    "min_amount": "10",
+    "max_amount": "10000.00",
+    "min_settlement_delay": 1,
+    "max_settlement_delay": 3,
+    "seed": 42,
+    "inject_discrepancies": true,
+    "cross_month_count": 3,
+    "rounding_count": 10,
+    "duplicate_count": 3,
+    "orphan_refund_count": 2
+  },
+  "total_platform_records": 105,
+  "total_bank_records": 101,
+  "injected_discrepancies": [
+    {
+      "type": "cross_month_settlement",
+      "transaction_id": "TXN000100",
+      "settlement_id": "SET000093",
+      "original_values": {
+        "settlement_date": "2026-10-26T08:17:31+00:00"
+      },
+      "modified_values": {
+        "settlement_date": "2026-11-26T08:17:31+00:00"
+      },
+      "expected_classification": "timing_difference"
+    },
+    {
+      "type": "cross_month_settlement",
+      "transaction_id": "TXN000091",
+      "settlement_id": "SET000085",
+      "original_values": {
+        "settlement_date": "2026-10-29T19:44:18+00:00"
+      },
+      "modified_values": {
+        "settlement_date": "2026-11-29T19:44:18+00:00"
+      },
+      "expected_classification": "timing_difference"
+    },
+    {
+      "type": "cross_month_settlement",
+      "transaction_id": "TXN000041",
+      "settlement_id": "SET000038",
+      "original_values": {
+        "settlement_date": "2026-10-27T01:44:38+00:00"
+      },
+      "modified_values": {
+        "settlement_date": "2026-11-27T01:44:38+00:00"
+      },
+      "expected_classification": "timing_difference"
+    },
+    {
+      "type": "aggregate_rounding_discrepancy",
+      "transaction_id": "TXN000015",
+      "settlement_id": "SET000012",
+      "original_values": {
+        "amount": "3807.46"
+      },
+      "modified_values": {
+        "amount": "3807.45"
+      },
+      "expected_classification": "amount_difference",
+      "expected_financial_difference": "-0.01"
+    },
+    {
+      "type": "aggregate_rounding_discrepancy",
+      "transaction_id": "REF000004",
+      "settlement_id": "SET000097",
+      "original_values": {
+        "amount": "1843.05"
+      },
+      "modified_values": {
+        "amount": "1843.06"
+      },
+      "expected_classification": "amount_difference",
+      "expected_financial_difference": "0.01"
+    },
+    {
+      "type": "aggregate_rounding_discrepancy",
+      "transaction_id": "TXN000034",
+      "settlement_id": "SET000031",
+      "original_values": {
+        "amount": "7622.00"
+      },
+      "modified_values": {
+        "amount": "7621.99"
+      },
+      "expected_classification": "amount_difference",
+      "expected_financial_difference": "-0.01"
+    },
+    {
+      "type": "aggregate_rounding_discrepancy",
+      "transaction_id": "TXN000094",
+      "settlement_id": "SET000087",
+      "original_values": {
+        "amount": "1036.91"
+      },
+      "modified_values": {
+        "amount": "1036.92"
+      },
+      "expected_classification": "amount_difference",
+      "expected_financial_difference": "0.01"
+    },
+    {
+      "type": "aggregate_rounding_discrepancy",
+      "transaction_id": "TXN000043",
+      "settlement_id": "SET000040",
+      "original_values": {
+        "amount": "9643.99"
+      },
+      "modified_values": {
+        "amount": "9644.00"
+      },
+      "expected_classification": "amount_difference",
+      "expected_financial_difference": "0.01"
+    },
+    {
+      "type": "aggregate_rounding_discrepancy",
+      "transaction_id": "TXN000032",
+      "settlement_id": "SET000029",
+      "original_values": {
+        "amount": "2675.58"
+      },
+      "modified_values": {
+        "amount": "2675.57"
+      },
+      "expected_classification": "amount_difference",
+      "expected_financial_difference": "-0.01"
+    },
+    {
+      "type": "aggregate_rounding_discrepancy",
+      "transaction_id": "TXN000029",
+      "settlement_id": "SET000026",
+      "original_values": {
+        "amount": "644.64"
+      },
+      "modified_values": {
+        "amount": "644.65"
+      },
+      "expected_classification": "amount_difference",
+      "expected_financial_difference": "0.01"
+    },
+    {
+      "type": "aggregate_rounding_discrepancy",
+      "transaction_id": "TXN000022",
+      "settlement_id": "SET000019",
+      "original_values": {
+        "amount": "671.22"
+      },
+      "modified_values": {
+        "amount": "671.23"
+      },
+      "expected_classification": "amount_difference",
+      "expected_financial_difference": "0.01"
+    },
+    {
+      "type": "aggregate_rounding_discrepancy",
+      "transaction_id": "TXN000006",
+      "settlement_id": "SET000004",
+      "original_values": {
+        "amount": "4497.60"
+      },
+      "modified_values": {
+        "amount": "4497.61"
+      },
+      "expected_classification": "amount_difference",
+      "expected_financial_difference": "0.01"
+    },
+    {
+      "type": "aggregate_rounding_discrepancy",
+      "transaction_id": "TXN000008",
+      "settlement_id": "SET000006",
+      "original_values": {
+        "amount": "1563.24"
+      },
+      "modified_values": {
+        "amount": "1563.23"
+      },
+      "expected_classification": "amount_difference",
+      "expected_financial_difference": "-0.01"
+    },
+    {
+      "type": "duplicate_settlement_entry",
+      "transaction_id": "TXN000022",
+      "settlement_id": "SET000019",
+      "original_values": {
+        "settlement_id": "SET000019",
+        "transaction_id": "TXN000022",
+        "settlement_date": "2026-10-31T12:48:45+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "671.23",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000011"
+      },
+      "modified_values": {
+        "settlement_id": "SET000019",
+        "transaction_id": "TXN000022",
+        "settlement_date": "2026-10-31T12:48:45+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "671.23",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000011"
+      },
+      "expected_classification": "duplicate"
+    },
+    {
+      "type": "duplicate_settlement_entry",
+      "transaction_id": "TXN000090",
+      "settlement_id": "SET000084",
+      "original_values": {
+        "settlement_id": "SET000084",
+        "transaction_id": "TXN000090",
+        "settlement_date": "2026-10-11T05:39:38+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "106.60",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000012"
+      },
+      "modified_values": {
+        "settlement_id": "SET000084",
+        "transaction_id": "TXN000090",
+        "settlement_date": "2026-10-11T05:39:38+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "106.60",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000012"
+      },
+      "expected_classification": "duplicate"
+    },
+    {
+      "type": "duplicate_settlement_entry",
+      "transaction_id": "TXN000096",
+      "settlement_id": "SET000089",
+      "original_values": {
+        "settlement_id": "SET000089",
+        "transaction_id": "TXN000096",
+        "settlement_date": "2026-10-24T00:21:28+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9762.30",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000018"
+      },
+      "modified_values": {
+        "settlement_id": "SET000089",
+        "transaction_id": "TXN000096",
+        "settlement_date": "2026-10-24T00:21:28+00:00",
+        "transaction_type": "PAYMENT",
+        "amount": "9762.30",
+        "currency": "INR",
+        "settlement_status": "SETTLED",
+        "batch_id": "BAT000018"
+      },
+      "expected_classification": "duplicate"
+    },
+    {
+      "type": "orphan_refund",
+      "transaction_id": "REF000004",
+      "original_transaction_id": "TXN999001",
+      "original_values": {},
+      "modified_values": {
+        "original_transaction_id": "TXN999001"
+      },
+      "expected_classification": "orphan_refund"
+    },
+    {
+      "type": "orphan_refund",
+      "transaction_id": "REF000005",
+      "original_transaction_id": "TXN999002",
+      "original_values": {},
+      "modified_values": {
+        "original_transaction_id": "TXN999002"
+      },
+      "expected_classification": "orphan_refund"
+    }
+  ]
+}
