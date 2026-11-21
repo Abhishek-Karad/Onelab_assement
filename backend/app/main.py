@@ -17,6 +17,7 @@ class DiscrepancyAnalysisRequest(BaseModel):
     discrepancies: list[dict] = []
     transactions: list[dict] = []
 
+
 app = FastAPI(title="Payment Reconciliation Dataset Generator", version="1.0.0")
 
 # Vite serves the frontend from one of these local origins during development.
@@ -107,3 +108,4 @@ def analyze_reconciliation(request: DiscrepancyAnalysisRequest):
         message = str(exc)
         status = 503 if "not configured" in message else 502
         raise HTTPException(status, message)
+
