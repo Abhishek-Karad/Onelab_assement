@@ -10,6 +10,7 @@ from pydantic import BaseModel
 import io
 from datetime import date
 from decimal import Decimal, InvalidOperation
+import os
 
 
 class DiscrepancyAnalysisRequest(BaseModel):
@@ -20,14 +21,19 @@ app = FastAPI(title="Payment Reconciliation Dataset Generator", version="1.0.0")
 
 # Vite serves the frontend from one of these local origins during development.
 # Keep this explicit instead of allowing every origin.
+allowed_origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:4173",
+    "http://127.0.0.1:4173",
+]
+frontend_origin = os.getenv("FRONTEND_ORIGIN")
+if frontend_origin:
+    allowed_origins.append(frontend_origin.rstrip("/"))
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "http://localhost:4173",
-        "http://127.0.0.1:4173",
-    ],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["Content-Type"],

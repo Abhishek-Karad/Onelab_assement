@@ -2,7 +2,7 @@ import React,{useEffect,useMemo,useState} from 'react';
 import {createRoot} from 'react-dom/client';
 import './styles.css';
 
-const API='http://localhost:8000/api';
+const API = import.meta.env.VITE_API_BASE || 'http://localhost:8000/api';
 const numericFields=['payment_count','failed_payment_percentage','refund_percentage','min_amount','max_amount','min_settlement_delay','max_settlement_delay','seed','cross_month_count','rounding_count','duplicate_count','orphan_refund_count'];
 const labelize=(key)=>key.replaceAll('_',' ');
 function Field({label,children}){return <label><span>{label}</span>{children}</label>}
